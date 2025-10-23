@@ -4,48 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
-    <title>AI Uplifting Poem Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Uplifting Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Uplifting Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of your poem"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <br />
-      <div>
-        what is stronger
-        <br />than the human heart <br />which shatters over and over <br />and
-        still lives<br />
-        <br />- rupi kaur
-      </div>
-    </main>
-    <br />
-    <footer>
-      Created by
-      <a href="https://github.com/fifth-monger" target="_blank"
-        >Victoria Garcia</a
-      >
-      • Open-sourced on
-      <a
-        href="https://github.com/fifth-monger/kawaii-weather-widget"
-        target="_blank"
-        >GitHub</a
-      >
-      • Hosted by
-      <a href="https://kawaiipoemgenerator.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
+    <div class="container">
+      <header>
+        <h1>Uplifting Poem Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter the topic of your poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="poem-response">
+          what is stronger
+          <br />than the human heart <br />which shatters over and over
+          <br />and still lives<br />
+          <br />- rupi kaur
+        </div>
+      </main>
+      <footer>
+        AI project created by
+        <a href="https://github.com/fifth-monger" target="_blank"
+          >Victoria Garcia</a
+        >
+        • Open-sourced on
+        <a
+          href="https://github.com/fifth-monger/kawaii-weather-widget"
+          target="_blank"
+          >GitHub</a
+        >
+        • Hosted by
+        <a href="https://kawaiipoemgenerator.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
