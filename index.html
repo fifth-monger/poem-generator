@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Uplifting Poem Generator</title>
   </head>
   <body>
@@ -18,7 +20,7 @@
         <h1>Uplifting Poem Generator</h1>
       </header>
       <main>
-        <form>
+        <form id="poem-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of your poem"
@@ -26,10 +28,11 @@
             required
             autocomplete="off"
             class="instructions"
+            id="context"
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="poem-response">
+        <div class="poem-response" id="poem-response">
           what is stronger
           <br />than the human heart <br />which shatters over and over
           <br />and still lives<br />
