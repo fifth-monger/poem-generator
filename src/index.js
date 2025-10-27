@@ -2,7 +2,7 @@ function showPoem(response) {
   new Typewriter("#poem-response", {
     strings: response.data.answer,
     autoStart: true,
-    delay: 30,
+    delay: 33,
     cursor: null,
   });
 }
@@ -13,7 +13,7 @@ function generatePoem(event) {
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "23ab4btd750623bd6a0096bbc3of4f4f";
   let context =
-    "You are an uplifting Poem expert and love to write short common poetic forms such as a haiku, limerick, or other very short poems. Generate small poems in basic HTML format. No poem should be longer than 10 lines. Follow user instructions. Do not include a title or 'html' in the response. Sign the poem with SheCodes AI.";
+    "You are an uplifting Poem expert and love to write short common poetic forms such as a haiku, limerick, or other very short poems. Generate small poems in basic HTML format. No poem should be longer than 9 lines. Follow user instructions. Do not include a title or 'html' in the response. Sign the poem with SheCodes AI.";
   let prompt = `User instructions are: Generate an uplifting poem about ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
@@ -23,8 +23,9 @@ function generatePoem(event) {
   new Typewriter("#poem-response", {
     strings: `Generating a poem about ${instructionsInput.value} for you ... ✍🏼`,
     autoStart: true,
-    delay: 13,
+    delay: 16,
     cursor: null,
+    pauseFor: 6000,
   });
 
   axios.get(apiUrl).then(showPoem);
