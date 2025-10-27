@@ -18,8 +18,11 @@ function generatePoem(event) {
   let prompt = `User instructions are: Generate an uplifting poem about ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.querySelector("#poem-response");
+  poemElement.classList.remove("hidden");
+
   new Typewriter("#poem-response", {
-    strings: "Generating a new poem for you ... ✍🏼",
+    strings: `Generating a poem about ${instructionsInput.value} for you ... ✍🏼`,
     autoStart: true,
     delay: 13,
     cursor: null,
